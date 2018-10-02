@@ -23,14 +23,14 @@ namespace IoTnxt.Example.Gateway
                     GatewayId = Program.GatewayId,
                     Secret = Program.SecretKey,
                     Make = "IoT.nxt",
-                    Model = "Example Gateway",
+                    Model = "Kitchen Gateway",
                     FirmwareVersion = "1.0.0",
                     Devices = new Dictionary<string, Device>
                     {
-                        ["KITCHENLIGHT"] = new Device
+                        ["KITCHENSTOVE"] = new Device
                         {
-                            DeviceName = "KITCHENLIGHT",
-                            DeviceType = "Light",
+                            DeviceName = "KITCHENSTOVE",
+                            DeviceType = "STOVELIGHT",
                             Properties = new Dictionary<string, DeviceProperty>
                             {
                                 ["ON"] = new DeviceProperty { PropertyName = "ON" }
@@ -52,16 +52,16 @@ namespace IoTnxt.Example.Gateway
                 _logger.LogInformation($"Turning light {(isOn ? "On" : "Off")}");
                 try
                 {
-                await _redq.SendGateway1NotificationAsync(
-                    "DEFAULT",
-                    Program.GatewayId,
-                    DateTime.UtcNow,
-                    null,
-                    null,
-                    DateTime.UtcNow,
-                    true,
-                    false,
-                    ("KITCHENLIGHT", "ON", isOn ? 1 : 0));
+                    await _redq.SendGateway1NotificationAsync(
+                        "T000000002",
+                        Program.GatewayId,
+                        DateTime.UtcNow,
+                        null,
+                        null,
+                        DateTime.UtcNow,
+                        true,
+                        false,
+                        ("KITCHENSTOVE", "ON", isOn ? 1 : 0));
                 }
                 catch (Exception ex)
                 {
@@ -70,7 +70,7 @@ namespace IoTnxt.Example.Gateway
 
                 isOn = !isOn;
 
-                await Task.Delay(1000);
+                await Task.Delay(2000);
             }
         }
 
