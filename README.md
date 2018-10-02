@@ -40,6 +40,7 @@ Gateway setup
 Open the file Program.cs
 You can edit the gateway id for this device , we have added a generic one for you 
 You can edit the Secretkey , it is your password . It should be strong and secure and never shared except during registration. It cannot be changed once you have registered the gateway.
+
 ------------------------------------------
 Add packets or devices 
 ------------------------------------------
