@@ -1,15 +1,16 @@
 # IoT.nxt Example C# Gateway
 
-An example of a gateway that connects to the IoT.nxt platform in C#.
+An example of a gateway that connects to the IoT.nxt platform in Csharp.
 
 How to : 
 
 -----------------------------------------------
 Pre-requisites 
-*Git for windows and .net 4.7 or later 
+-----------------------------------------------
+Git for windows and .net 4.7 or later 
+Basic understanding of c-sharp code 
+*Understanding of csharp code
 
-*Understanding of c# code
--------------------------------------------------
 
 We recommend you get git for windows to clone the repo 
 https://git-scm.com/download/win 
