@@ -6,8 +6,8 @@ How to :
 
 -----------------------------------------------
 Pre-requisites 
-Git for windows and .net 4.7 or later 
-Understanding of c# code
+#Git for windows and .net 4.7 or later 
+#Understanding of c# code
 -------------------------------------------------
 
 We recommend you get git for windows to clone the repo 
